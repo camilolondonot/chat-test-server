@@ -17,7 +17,7 @@ Backend para una aplicación tipo chatbot que se conecta a una API de inteligenc
 ### 1. Clonar el repositorio
 
 git clone https://github.com/camilolondonot/chat-test-server.git
-cd chat-test-server/server
+#cd chat-test-server/server
 
 
 ### 2. Instalar dependencias
@@ -26,23 +26,15 @@ npm install
 ### 3. Ejecutar en desarrollo
 npm run dev
 
-### 4. Configuración del archivo .env
-# API de OpenAI u otra IA
-OPENAI_API_URL=https://api.openai.com/v1/chat/completions
-OPENAI_API_KEY=sk-...
-
-# Configuración del servidor
-PORT=3000
-
 # Configuración de la base de datos
-DB_HOST=localhost
-DB_PORT=puerto
-DB_USER=root
-DB_PASSWORD=tu_password
-DB_NAME=nombre_base_datos
+#DB_HOST=localhost
+#DB_PORT=puerto
+#DB_USER=root
+#DB_PASSWORD=tu_password
+#DB_NAME=nombre_base_datos
 
 
-### 5. 📁 Estructura del Proyecto
+### 4. 📁 Estructura del Proyecto
 ```
 ├── 📁server
     └── 📁src
