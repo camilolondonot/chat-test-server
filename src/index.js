@@ -19,7 +19,7 @@ const limiter = rateLimit({
 app.use(limiter);
 
 app.use(cors({
-  origin: ['https://test-chat-ia.netlify.app'],
+  origin: ['https://test-chat-ia.netlify.app', 'http://localhost:5173'],
   methods: ['GET', 'POST'],
   credentials: true
 }));

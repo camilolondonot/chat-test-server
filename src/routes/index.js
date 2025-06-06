@@ -1,5 +1,5 @@
 import express from 'express';
-import { getMessages, postMessage } from '../controllers/index.js';
+import { getMessages, postMessage, resetChat } from '../controllers/index.js';
 
 const router = express.Router();
 /**
@@ -32,5 +32,16 @@ router.get('/', getMessages);
  *         description: Mensaje creado y respuesta del bot
  */
 router.post('/', postMessage);
+
+/**
+ * @swagger
+ * /messages/reset:
+ *   delete:
+ *     summary: Eliminar todos los mensajes
+ *     responses:
+ *       200:
+ *         description: Chat reseteado
+ */
+router.delete('/reset', resetChat);
 
 export default router;

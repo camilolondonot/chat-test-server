@@ -26,3 +26,8 @@ export const postMessage = async (req, res) => {
 
 	res.json({ user: content, bot: botMessage });
 };
+
+export const resetChat = async (req, res) => {
+	await db.query('TRUNCATE TABLE messages');
+	res.json({ message: 'Chat reseteado' });
+};
