@@ -28,6 +28,8 @@ app.use(express.json());
 
 app.use('/messages', messagesRoutes);
 
+swaggerDocs(app);
+
 app.get('/', (req, res) => {
   res.type('text').send(`
 🚀 Bienvenido a Chat Pocki — tu chatbot con flow 🤖
@@ -59,8 +61,6 @@ const PORT = process.env.PORT || 3001;
     await initDB();
     await db.getConnection();
     console.log('✅ Conectado a la base de datos de AWS RDS');
-
-    swaggerDocs(app);
 
     app.listen(PORT, () => {
       console.log(`🔥 Servidor prendido en http://localhost:${PORT}`);
